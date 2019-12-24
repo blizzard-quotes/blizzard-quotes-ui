@@ -1,9 +1,11 @@
 <template>
   <v-app-bar flat app>
-    <v-toolbar-title class="text-uppercase title">
-      <span class="font-weight-light">Blizzard</span>
-      <span class="font-weight-medium">Quotes</span>
-    </v-toolbar-title>
+    <router-link to="/" style="color: inherit; text-decoration: inherit;">
+      <v-toolbar-title class="text-uppercase title">
+        <span class="font-weight-light">Blizzard</span>
+        <span class="font-weight-medium">Quotes</span>
+      </v-toolbar-title>
+    </router-link>
 
     <v-spacer></v-spacer>
 
