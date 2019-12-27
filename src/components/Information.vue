@@ -11,16 +11,17 @@
       </p>
     </v-row>
     <v-row align="center" justify="center">
-      <v-column v-for="quote in quotes" :key="quote">
-        <a :href="quote.href">
-          <v-img
-            :alt="quote.text"
-            height="400"
-            width="400"
-            :src="quote.image"
-          />
+      <section
+        v-for="(image, i) in images"
+        :key="i"
+        align="center"
+        justify="center"
+      >
+        <a :href="image.href">
+          <v-img :alt="image.alt" :src="image.src" class="game-icon" />
+          <p>{{ image.mouseOver }}</p>
         </a>
-      </v-column>
+      </section>
     </v-row>
     <v-row align="center" justify="center" class="mx-2">
       <p class="text-center mt-2 mb-0">
@@ -32,26 +33,42 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Information',
 
   data: () => ({
-    quotes: [
+    dimensions: '400',
+    images: [
       {
-        text: 'Warcraft 3 Quotes',
+        id: 'warcraft-3-quotes',
+        alt: 'Warcraft 3 Quotes',
         href: 'https://wc3.blizzardquotes.com',
-        image: require('@/assets/blizzard/warcraft-iii.svg')
+        src: require('@/assets/blizzard/warcraft-iii.svg')
       },
       {
-        text: 'Starcraft 2 Quotes',
+        id: 'starcraft-2-quotes',
+        alt: 'Starcraft 2 Quotes',
         href: 'https://sc2.blizzardquotes.com',
-        image: require('@/assets/blizzard/starcraft-ii.svg')
+        src: require('@/assets/blizzard/starcraft-ii.svg')
       },
       {
-        text: 'Starcraft 1 Quotes',
+        id: 'starcraft-1-quotes',
+        alt: 'Starcraft 1 Quotes',
         href: 'https://sc.blizzardquotes.com',
-        image: require('@/assets/blizzard/starcraft-remastered.svg')
+        src: require('@/assets/blizzard/starcraft-remastered.svg')
       }
     ]
   })
 };
 </script>
+
+<style>
+div.game-icon {
+  opacity: 0.85;
+  height: 400px;
+  width: 400px;
+  transition: opacity 0.15s;
+}
+div.game-icon:hover {
+  opacity: 1;
+}
+</style>
