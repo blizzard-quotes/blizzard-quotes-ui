@@ -1,6 +1,17 @@
 <template>
-  <v-footer>
-    <v-spacer></v-spacer>
-    <div>{{ new Date().getFullYear() }} - <strong>Whitebread</strong></div>
-  </v-footer>
+  <section>
+    <v-container>
+      <p class="text-center">
+        No affiliation with Blizzard Entertainment. For questions, suggestions,
+        or assistance, e-mail blizzardquotes@gmail.com.
+      </p>
+    </v-container>
+    <v-footer>
+      <v-spacer></v-spacer>
+      <div>
+        {{ new Date().getFullYear() }} -
+        <strong>Whitebread</strong>
+      </div>
+    </v-footer>
+  </section>
 </template>
