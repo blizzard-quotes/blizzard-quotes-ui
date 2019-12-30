@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <v-row justify="center" class="mx-2">
-      <h1>BY THE LIGHT OF THE MOON</h1>
+      <h1 class="text-center">BY THE LIGHT OF THE MOON</h1>
     </v-row>
     <v-row justify="center" class="mx-2">
       <p class="text-justify mt-2 mb-0">
