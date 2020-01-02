@@ -29,6 +29,9 @@ npm run build
 
 ### Deploys the built package
 
+NOTE: deployment only works against default AWS profile.
+`export AWS_PROFILE=blizzard-quotes` to set to the blizzard-quotes account.
+
 ```
 npm run deploy
 ```

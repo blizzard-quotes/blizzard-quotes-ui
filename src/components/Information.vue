@@ -1,22 +1,22 @@
 <template>
-  <v-container fluid>
+  <v-container>
     <v-row justify="center" class="mx-2">
       <h1 class="text-center">BY THE LIGHT OF THE MOON</h1>
     </v-row>
     <v-row justify="center" class="mx-2">
       <p class="text-justify mt-2 mb-0">
         This domain contains quotes from classic Blizzard Entertainment games.
-        Each game below leads to a user interface along with an API for said
-        game containing memorable quotes. Click one of the games below for more
-        information.
+        Each game under this domain leads has a UI and an API for accessing and
+        retrieving quotes. For more information, click on the icon for the game you
+        are interested.
       </p>
     </v-row>
-    <v-row justify="center">
-      <section v-for="(image, i) in images" :key="i">
+    <v-row dense justify="center">
+      <v-col cols="12" sm="4" md="4" v-for="(image, i) in images" :key="i">
         <a :href="image.href">
           <v-img :alt="image.alt" :src="image.src" class="game-icon" />
         </a>
-      </section>
+      </v-col>
     </v-row>
   </v-container>
 </template>
@@ -53,8 +53,6 @@ export default {
 <style>
 .game-icon {
   opacity: 0.8;
-  height: 300px;
-  width: 300px;
   transition: opacity 0.2s;
 }
 .game-icon:hover {
