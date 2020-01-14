@@ -14,7 +14,7 @@
     <v-row dense justify="center">
       <v-col cols="12" sm="4" md="4" v-for="(image, i) in images" :key="i">
         <a :href="image.href">
-          <v-img :alt="image.alt" :src="image.src" class="game-icon" />
+          <v-img :alt="image.alt" :src="image.src" aspect-ratio="1" class="game-icon" />
         </a>
       </v-col>
     </v-row>
