@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row justify="center" class="mx-2">
-      <h1 class="text-center">BY THE LIGHT OF THE MOON</h1>
+      <h1 class="text-center">{{ h1 }}</h1>
     </v-row>
     <v-row justify="center" class="mx-2">
       <p class="text-justify mt-2 mb-0">
@@ -27,10 +27,16 @@
 </template>
 
 <script>
+import Konami from 'konami';
+
+const H1_DEFAULT = 'STAY AWHILE AND LISTEN';
+const H1_KONAMI = 'BY THE LIGHT OF THE MOON';
+
 export default {
   name: 'Information',
 
   data: () => ({
+    h1: H1_DEFAULT,
     images: [
       {
         id: 'warcraft-3-quotes',
@@ -52,6 +58,11 @@ export default {
       },
     ],
   }),
+  created() {
+    new Konami(() => {
+      this.h1 = H1_KONAMI;
+    });
+  },
 };
 </script>
 
