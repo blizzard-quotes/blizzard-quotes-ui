@@ -3,8 +3,8 @@
     <v-container>
       <v-row justify="center" class="mx-2">
         <p class="text-justify">
-          No affiliation with Blizzard Entertainment. For questions, suggestions,
-          or assistance, e-mail blizzardquotes@gmail.com.
+          No affiliation with Blizzard Entertainment. For questions,
+          suggestions, or assistance, e-mail blizzardquotes@gmail.com.
         </p>
       </v-row>
     </v-container>

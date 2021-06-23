@@ -19,13 +19,13 @@ export default {
   components: {
     Header,
     Information,
-    Footer
+    Footer,
   },
 
   data: () => ({}),
 
   created() {
     this.$vuetify.theme.dark = true;
-  }
+  },
 };
 </script>

@@ -7,14 +7,19 @@
       <p class="text-justify mt-2 mb-0">
         This domain contains quotes from classic Blizzard Entertainment games.
         Each game under this domain leads has a UI and an API for accessing and
-        retrieving quotes. For more information, click on the icon for the game you
-        are interested.
+        retrieving quotes. For more information, click on the icon for the game
+        you are interested in.
       </p>
     </v-row>
     <v-row dense justify="center">
       <v-col cols="12" sm="4" md="4" v-for="(image, i) in images" :key="i">
         <a :href="image.href">
-          <v-img :alt="image.alt" :src="image.src" aspect-ratio="1" class="game-icon" />
+          <v-img
+            :alt="image.alt"
+            :src="image.src"
+            aspect-ratio="1"
+            class="game-icon"
+          />
         </a>
       </v-col>
     </v-row>
@@ -23,30 +28,30 @@
 
 <script>
 export default {
-  name: "Information",
+  name: 'Information',
 
   data: () => ({
     images: [
       {
-        id: "warcraft-3-quotes",
-        alt: "Warcraft 3 Quotes",
-        href: "https://wc3.blizzardquotes.com",
-        src: require("@/assets/blizzard/warcraft-iii.svg")
+        id: 'warcraft-3-quotes',
+        alt: 'Warcraft 3 Quotes',
+        href: 'https://wc3.blizzardquotes.com',
+        src: require('@/assets/blizzard/warcraft-iii.svg'),
       },
       {
-        id: "starcraft-2-quotes",
-        alt: "Starcraft 2 Quotes",
-        href: "https://sc2.blizzardquotes.com",
-        src: require("@/assets/blizzard/starcraft-ii.svg")
+        id: 'starcraft-2-quotes',
+        alt: 'Starcraft 2 Quotes',
+        href: 'https://sc2.blizzardquotes.com',
+        src: require('@/assets/blizzard/starcraft-ii.svg'),
       },
       {
-        id: "starcraft-1-quotes",
-        alt: "Starcraft 1 Quotes",
-        href: "https://sc.blizzardquotes.com",
-        src: require("@/assets/blizzard/starcraft-remastered.svg")
-      }
-    ]
-  })
+        id: 'starcraft-1-quotes',
+        alt: 'Starcraft 1 Quotes',
+        href: 'https://sc.blizzardquotes.com',
+        src: require('@/assets/blizzard/starcraft-remastered.svg'),
+      },
+    ],
+  }),
 };
 </script>
 
