@@ -1,9 +1,9 @@
 <template>
   <v-app>
     <Header></Header>
-    <v-content>
+    <v-main>
       <Information></Information>
-    </v-content>
+    </v-main>
     <Footer></Footer>
   </v-app>
 </template>
@@ -19,13 +19,13 @@ export default {
   components: {
     Header,
     Information,
-    Footer
+    Footer,
   },
 
   data: () => ({}),
 
   created() {
     this.$vuetify.theme.dark = true;
-  }
+  },
 };
 </script>
